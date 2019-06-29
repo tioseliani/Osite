@@ -1,0 +1,298 @@
+body {
+    height: 630px;
+    background-image: url('../img/background.png');
+}
+.main-row {
+    margin: 5% 6.66%;
+    height: 1100px;
+}
+.left-box {
+    background-color: #edf0f5;
+    border-radius: 35px 0 0 35px;
+}
+.right-box {
+    background-color: white;
+    border-radius: 0 35px 35px 0;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    color: #43434a;
+    padding: 0;
+    font-size: 12px;
+}
+nav ul li {
+    padding: 10px 0px;
+}
+.child-li {
+    padding-left: 30px;
+}
+nav a {
+    color: #43434a;
+}
+.logo {
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.website-ad {
+    margin-bottom: 60px;
+}
+.nav-bold {
+    font-weight: bold;
+    font-size: 14px;
+}
+.icons {
+    color: #66a4ff;
+    font-size: 18px;
+    padding-right: 10px;
+}
+.notification-box {
+    margin-bottom: 30px;
+}
+.notification-quantity {
+    color: #ff4949;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 40%;
+    background-color: rgb(250, 228, 215);
+}
+
+
+/* Personal Info */
+.card-img-top {
+    height: 115px;
+    width: 100px;
+    border: 2px solid #fff;
+    border-radius: 68%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.card {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+.card-body p {
+    font-weight: bold;
+    color: #35c086;
+}
+.e-mail {
+    color: #43434a;
+    text-decoration: none;
+}
+.btn-success {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+}
+#progressbar6 {
+    width: 60%;
+    height: 3px;
+    background-color: #0db46e;
+}
+/* Plan Uses */
+.plan-uses {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Click Counter */
+.clicks {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 20px;
+}
+.click-q {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+.click-d {
+    font-size: 12px;
+}
+
+/* Header */
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.form-control {  
+    border: 1px solid #edeff3;
+    background-color: #f8f9fb !important;
+    padding: 8px 5px;
+    color: #43434a;
+    padding-left: 30%;
+    outline: none;
+    font-size: 12px;
+}
+.input-group>.form-control.calendar-start {
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+}
+
+.input-group>.form-control.calendar-end {
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+}
+
+.calendar-icon:hover {
+    cursor: pointer;
+}
+.calendar-icon {
+    color: #848484;
+    font-size: 16px;
+    position: absolute;
+    left: 7%;
+    top: calc(50% - 8px);
+}
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.input-group {
+    width: 140px;
+}
+.select {
+    border: 1px solid #edeff3;
+    border-radius: 5px;
+    background-color: #f8f9fb;
+    padding: 8px 5px;
+    color: #43434a;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+/****Fraud Data Analyse****/
+.fraud-data-title {
+    padding: 30px 0px 0 30px;
+}
+.fraud-data-title h2 {
+    font-size: 16px;
+}
+.fraud-data-title p {
+    font-size: 14px;
+}
+.fraud-data-box {
+    height: 500px;
+    box-shadow: 0 0 10px #b5b2b252;
+    width: 100%;
+    display: inline-flex;
+}
+
+/* Fraud threat score - Semi-Circle Chart styling */
+.highcharts-color-0 {
+    fill: #fc584d;
+}
+.highcharts-color-1 {
+    fill: #f99300;
+}
+.highcharts-color-2 {
+    fill: #286bff;
+}
+.highcharts-button-symbol, .highcharts-credits {
+    visibility: hidden;   
+}
+.fraud-level {
+    font-size: 70px;
+    font-weight: bold;
+}
+.fraud-level-desc {
+    font-size: 12px;
+}
+.highcharts-root {
+    height: 320px;
+    font-family: inherit;
+}
+.highcharts-container {
+    height: 300px !important;
+    margin-top: -20px;
+}
+/* Fraud threat score - table styling */
+.fraud-data-table {
+    text-align: center;
+}
+.fraud-data-table span {
+    font-size: 12px;
+}
+
+/* Blocked Fraud Type - Line bar styling */
+.fraud-type-title {
+    font-size: 16px;
+    padding: 30px 0;
+}
+#fraud-type {
+    padding-right: 40px;
+}
+.line-bar-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.fraud-type-name {
+    font-weight: bold;
+}
+/* Blocked Fraud Type - Footer */
+.fraud-type-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.vpn-s {
+    font-weight: bold;
+    margin-right: 10px;
+}
+.fraud-type-footer a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #5a8fff;
+}
+
+/* Details box */
+.details-box {
+    height: 400px;
+    box-shadow: 0 0 10px #b5b2b252;
+    margin-top: 30px;
+    padding: 30px 40px;
+}
+.detail-box-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+}
+.download-result {
+    color: #5a8fff;
+}
+.download-result i {
+    margin-left: 8px;
+}
+.detail-box-table {
+    font-size: 14px;
+}
+.detail-box-table td {
+    padding: 10px 0;
+}
+.center-td {
+    text-align: center;
+}
+table {
+    margin: 0 auto;  
+    display: table;  
+}

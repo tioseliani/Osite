@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Osite</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" /> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="./css/lineProgressbar.css" />
+    <link rel="stylesheet" href="./css/el-switch.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="row main-row">
+        <div class="col-2 left-box">
+            <!-- Navigation -->
+            <nav class="">
+                <div class="logo">
+                    <i class="fas fa-globe-europe icons"></i>
+                    <span class="website-ad nav-bold">Osite.com</span>
+                </div>
+                <ul>
+                    <li>
+                        <i class="fas fa-envelope-open-text icons"></i>
+                        <a class="nav-bold" style="margin-top: 20px">Analitycs</a>
+                        <ul>
+                            <li class="child-li"><a href="">Dashboard</a></li>
+                            <li class="child-li"><a href="">Stats</a></li>
+                            <li class="child-li"><a href="">Advertising</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <i class="fas fa-briefcase icons"></i>
+                        <a class="nav-bold">Setups</a>
+                        <ul>
+                            <li class="child-li"><a href="">Customizations</a></li>
+                            <li class="child-li"><a href="">Integrations</a></li>
+                            <li class="child-li"><a href="">Add Domain</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="notification-box">
+                    <span><i class="fas fa-bell icons"></i></span>
+                    <a href="" class="nav-bold">Notifications</a>
+                    <span class="notification-quantity">12</span>
+                </div>
+                <div>
+                    <span><i class="fas fa-power-off icons"></i></span>
+                    <span class="nav-bold">Logout</span>
+                </div>
+            </nav>
+            <hr>
+
+            <!-- Personal Info -->
+            <div class="card col-12">
+                <img src="./img/admin.jpg" class="card-img-top" alt="admin photo">
+                <div class="card-body">
+                    <a href="mailto:admin@example.ge" class="e-mail">admin@example.ge</a>
+                    <p>Your Plan: Standard</p>
+                    <a href="#" class="btn btn-success">Upgrade your plan</a>
+                </div>
+            </div>
+            <div>
+                <p class="plan-uses">Plan Uses</p>
+                <div id="progressbar6"></div>
+            </div>
+
+            <!-- Click Counter -->
+            <div class="clicks">
+                <div class="click-box">
+                    <p class="click-q">2,450</p>
+                    <p class="click-d">clicks Reviewed</p>
+                </div>
+                <div class="click-box">
+                    <p class="click-q">2500</p>
+                    <p class="click-d">Monthly clicks</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Analytic Data -->
+        <div class="col-10 mydiv right-box">
+            <header class="header">
+                <h1 class="title">Stats</h1>
+                <div class="header-right">
+                    <div id="datepickerStart" class="input-group date" data-date-format="MM dd, yyyy">
+                        <input class="form-control calendar-start" type="text" readonly />
+                        <span class="input-group-addon"><i class="far fa-calendar-alt calendar-icon"></i></span>
+                    </div>
+                    <div id="datepickerEnd" class="input-group date" data-date-format="MM dd, yyyy">
+                        <input class="form-control calendar-end" type="text" readonly />
+                        <span class="input-group-addon"><i class="far fa-calendar-alt calendar-icon"></i></span>
+                    </div>
+                    <div class="">
+                        <select class="select">
+                            <option value="custom">Custom</option>
+                            <option value="value2">Value 2</option>
+                            <option value="value3">Value 3</option>
+                            <option value="value4">Value 4</option>
+                        </select>
+                    </div>
+                </div>  
+            </header>
+
+            <!-- Fraud Data Analyse -->
+
+            <section class="fraud-data-box">
+                <div class="col-md-6 col-xs-12">
+                    <div class="fraud-data-title">
+                        <h2>Fraud Threat Score</h2>
+                        <p>Fraud Levels</p>   
+                    </div>
+                    <div id="container"></div>
+                  
+                    <table class="fraud-data-table col-12">
+                        <thead>
+                            <tr class="row">
+                                <th class="col-4">Clean IPs</th>
+                                <th class="col-4">Suspected IPs</th>
+                                <th class="col-4">Fraudulent IPs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row">
+                                <td class="col-4">
+                                    <span>300 Clicks,</span>
+                                    <span>20%</span>
+                                </td>
+                                <td class="col-4">
+                                    <span>300 Clicks,</span>
+                                    <span>20%</span>
+                                </td>
+                                <td class="col-4">
+                                    <span>300 Clicks,</span>
+                                    <span>20%</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>  
+                <div id="fraud-type" class="col-md-6 col-xs-12">
+                    <h2 class="fraud-type-title">Blocked fraud type</h2>
+                    <div class="line-bar-title">
+                        <span class="fraud-type-name">Known Fraud IP</span>
+                        <div>
+                            <span>150 Clicks,</span>
+                            <span>10%</span>
+                        </div>
+                        
+                    </div>
+                    <div id="progressbar1"></div>
+
+                    <div class="line-bar-title">
+                        <span class="fraud-type-name">Fraudulent Device</span>
+                        <div>
+                            <span>150 Clicks,</span>
+                            <span>10%</span>
+                        </div>
+                    </div>
+                    <div id="progressbar2"></div>
+
+                    <div class="line-bar-title">
+                        <span class="fraud-type-name">Manually Blocked</span>
+                        <div>
+                            <span>150 Clicks,</span>
+                            <span>10%</span>
+                        </div>    
+                    </div>    
+                    <div id="progressbar3"></div>
+
+                    <div class="line-bar-title">
+                        <span class="fraud-type-name">Exclusion IP List</span>
+                        <div>
+                            <span>150 Clicks,</span>
+                            <span>10%</span>
+                        </div>
+                    </div>
+                    <div id="progressbar4"></div>
+
+                    <div class="line-bar-title">
+                        <span class="fraud-type-name">Expressive Clicks</span>
+                        <div>
+                            <span>150 Clicks,</span>
+                            <span>10%</span>
+                        </div>
+                    </div>
+                    <div id="progressbar5"></div>
+                    <div class="fraud-type-footer">
+                        <div class="ftf-right">
+                            <span class="vpn-s">VPN</span>
+                            <span>Not Enabled</span>
+                        </div>
+                        <a href="">Go to Settings</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Details box -->
+            <section class="details-box">
+                <div class="detail-box-header">
+                    <p>Details</p>
+                    <div class="download-result">
+                        <span>Download Results</span>
+                        <span><i class="fas fa-download"></i></span> 
+                    </div> 
+                </div>
+                <table class="detail-box-table col-12">
+                    <thead>
+                        <tr>
+                            <th>IP Adress</th>
+                            <th class="center-td">Fraud Score</th>
+                            <th>Status</th>
+                            <th class="center-td">Clicks</th>
+                            <th>First Clicks</th>
+                            <th class="country">Country</th>
+                            <th>OS & Browser</th>
+                            <th>ISP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>107.77.205.225</td>
+                            <td class="center-td">6.3</td>
+                            <td>
+                                <div class="toggle-switch">
+                                    <label class="el-switch el-switch-red">
+                                        <input type="checkbox" name="switch" checked>
+                                        <span class="el-switch-style" id="togBtn"></span>
+                                    </label>
+                                    <span class="margin-r">Auto Blocked</span>
+                                </div>
+                            </td>
+                            <td class="center-td">1</td>
+                            <td>08-11-2018 | 23:51:08</td>
+                            <td>
+                                <span><img src="./img/russia-flag-icon.png"></span>
+                                <span>Russia</span>
+                            </td>
+                            <td>OS: iOs 12.01</td>
+                            <td>T-mobile USA inc</td>
+                        </tr>
+                        <tr>
+                            <td>107.77.205.225</td>
+                            <td class="center-td">6.3</td>
+                            <td>
+                                <div class="toggle-switch">
+                                    <label class="el-switch el-switch-red">
+                                        <input type="checkbox" name="switch" checked>
+                                        <span class="el-switch-style" id="togBtn"></span>
+                                    </label>
+                                    <span class="margin-r">Auto Blocked</span>
+                                </div>
+                            </td>
+                            <td class="center-td">1</td>
+                            <td>08-11-2018 | 23:51:08</td>
+                            <td>
+                                <span><img src="./img/russia-flag-icon.png"></span>
+                                <span>Russia</span>
+                            </td>
+                            <td>OS: iOs 12.01</td>
+                            <td>T-mobile USA inc</td>
+                        </tr>
+                        <tr>
+                            <td>107.77.205.225</td>
+                            <td class="center-td">6.3</td>
+                            <td>
+                                <div class="toggle-switch">
+                                    <label class="el-switch el-switch-red">
+                                        <input type="checkbox" name="switch" checked>
+                                        <span class="el-switch-style" id="togBtn"></span>
+                                    </label>
+                                    <span class="margin-r">Auto Blocked</span>
+                                </div>
+                            </td>
+                            <td class="center-td">1</td>
+                            <td>08-11-2018 | 23:51:08</td>
+                            <td>
+                                <span><img src="./img/russia-flag-icon.png"></span>
+                                <span>Russia</span>
+                            </td>
+                            <td>OS: iOs 12.01</td>
+                            <td>T-mobile USA inc</td>
+                        </tr>
+                        <tr>
+                            <td>107.77.205.225</td>
+                            <td class="center-td">6.3</td>
+                            <td>
+                                <div class="toggle-switch">
+                                    <label class="el-switch el-switch-red">
+                                        <input type="checkbox" name="switch" checked>
+                                        <span class="el-switch-style" id="togBtn"></span>
+                                    </label>
+                                    <span class="margin-r">Auto Blocked</span>
+                                </div>
+                            </td>
+                            <td class="center-td">1</td>
+                            <td>08-11-2018 | 23:51:08</td>
+                            <td>
+                                <span><img src="./img/russia-flag-icon.png"></span>
+                                <span>Russia</span>
+                            </td>
+                            <td>OS: iOs 12.01</td>
+                            <td>T-mobile USA inc</td>
+                        </tr>
+                        <tr>
+                            <td>107.77.205.225</td>
+                            <td class="center-td">6.3</td>
+                            <td>
+                                <div class="toggle-switch">
+                                    <label class="el-switch el-switch-red">
+                                        <input type="checkbox" name="switch" checked>
+                                        <span class="el-switch-style" id="togBtn"></span>
+                                    </label>
+                                    <span class="margin-r">Auto Blocked</span>
+                                </div>
+                            </td>
+                            <td class="center-td">1</td>
+                            <td>08-11-2018 | 23:51:08</td>
+                            <td>
+                                <span><img src="./img/russia-flag-icon.png"></span>
+                                <span>Russia</span>
+                            </td>
+                            <td>OS: iOs 12.01</td>
+                            <td>T-mobile USA inc</td>
+                        </tr>    
+                    </tbody>
+                </table>
+            </section>
+            
+        </div>
+    </div>
+
+   
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <script src="./js/jquery.lineProgressbar.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
